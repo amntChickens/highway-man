@@ -1,6 +1,6 @@
 import {createServer} from 'http';
 import JsonAPI from './JsonAPI.mjs';
-import {tokens, generateToken, Users, User} from './Users.mjs'
+import {Tokens, generateToken, Users, User} from './Users.mjs'
 
 const api = new JsonAPI({
   token: 'string'
@@ -10,7 +10,7 @@ api.get({ resource: 'string' }, ({ token, resource }) => {
   if(token === 'EMPTY' && resource === 'new token')
     return { token: generateToken() };
   
-  if(tokens.indexOf(token) === -1)
+  if(Tokens.indexOf(token) === -1)
     return { error: 'invalid token' };
   
   const user = Users.get(token);
