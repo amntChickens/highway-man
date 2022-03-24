@@ -1,6 +1,6 @@
 import {createServer} from 'http';
 import JsonAPI from './JsonAPI.mjs';
-import {Tokens, generateToken, Users, User} from './Users.mjs'
+import {Tokens, generateToken, Users} from './Users.mjs'
 
 const api = new JsonAPI({
   token: 'string'
