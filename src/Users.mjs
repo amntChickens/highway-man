@@ -30,6 +30,4 @@ const Users = {
 };
 
 
-export Users;
-export Tokens;
-export generateToken;
+export { Users, Tokens, generateToken };
