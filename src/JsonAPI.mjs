@@ -137,4 +137,4 @@ function JsonAPI(_schema, _pathname)
 
 
 export default JsonAPI;
-export validateJson;
+export { validateJson };
