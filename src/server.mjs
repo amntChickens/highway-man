@@ -4,7 +4,7 @@ import {Tokens, generateToken, Users, User} from './Users.mjs'
 
 const api = new JsonAPI({
   token: 'string'
-}, 'users');
+}, '/users');
 
 // read a resource
 api.get({ resource: 'string' }, ({ token, resource }) => {
