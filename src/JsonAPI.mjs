@@ -120,9 +120,9 @@ function JsonAPI(_schema, _pathname)
     return self;
   };
   
-  self.put = (schema, hndlr) => {
+  self.patch = (schema, hndlr) => {
     schema = schema ?? null;
-    self.handlers['put'] = { schema , hndlr };
+    self.handlers['patch'] = { schema , hndlr };
     return self;
   };
   
