@@ -1,6 +1,6 @@
 import Store from 'Store.mjs';
 
-const db = new Store('db.json', {
+const db = await new Store('db.json', {
   autoWrite: (1000 * 60), // set the database to write to the file every minute
 });
 
