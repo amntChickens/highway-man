@@ -108,24 +108,28 @@ function JsonAPI(_schema, _pathname)
     return;
   }
   
+  // READ
   self.get = (schema, hndlr) => {
     schema = schema ?? null;
     self.handlers['get'] = { schema , hndlr };
     return self;
   };
   
+  // CREATE
   self.post = (schema, hndlr) => {
     schema = schema ?? null;
     self.handlers['post'] = { schema , hndlr };
     return self;
   };
   
+  // UPDATE
   self.patch = (schema, hndlr) => {
     schema = schema ?? null;
     self.handlers['patch'] = { schema , hndlr };
     return self;
   };
   
+  // DELETE
   self.delete = (schema, hndlr) => {
     schema = schema ?? null;
     self.handlers['delete'] = { schema , hndlr };
